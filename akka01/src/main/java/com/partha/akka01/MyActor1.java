@@ -13,7 +13,7 @@ public class MyActor1 extends AbstractActor{
 	public Receive createReceive() {
 		return receiveBuilder()
 				.match(String.class, input ->{
-					System.out.print(input);
+					System.out.println(input);
 				})
 				.build();
 	}
