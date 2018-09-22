@@ -1,0 +1,14 @@
+@(contactForm : Form[Contact])
+
+@import helper._
+
+@main("New contact"){
+	@form(routes.Agenda.createContact()){
+	
+		@inputText(contactForm("name"))
+		@inputText(contactForm("phone"))
+		@inputText(contactForm("email"))
+		<input type="submit" value="Submit"/>
+	}
+
+}
