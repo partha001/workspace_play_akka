@@ -38,5 +38,4 @@ public class Storage extends AbstractActor{
 	}
 	
 	
-
 }
