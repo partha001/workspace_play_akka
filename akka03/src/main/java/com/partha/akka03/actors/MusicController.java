@@ -1,4 +1,6 @@
-package com.partha.akka03;
+package com.partha.akka03.actors;
+
+import com.partha.akka03.messages.ControllerMessage;
 
 import akka.actor.AbstractLoggingActor;
 import akka.actor.Props;
@@ -21,8 +23,8 @@ public class MusicController extends AbstractLoggingActor{
 	@Override
 	public Receive createReceive() {
 		return receiveBuilder()
-				.match(Play.class, System.out:: println)
-				.match(Stop.class, System.out:: println)
+				.match(Play.class,req -> System.out.println("music starter - from inside MusicController.receive()" ))
+				.match(Stop.class,req -> System.out.println("music stopped - from inside MusicController.receive()" ))
 				.build();
 	}
 

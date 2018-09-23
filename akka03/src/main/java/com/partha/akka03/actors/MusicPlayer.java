@@ -1,4 +1,6 @@
-package com.partha.akka03;
+package com.partha.akka03.actors;
+
+import com.partha.akka03.messages.PlayerMessage;
 
 import akka.actor.AbstractLoggingActor;
 import akka.actor.ActorRef;
@@ -6,7 +8,8 @@ import akka.actor.Props;
 
 public class MusicPlayer extends AbstractLoggingActor{
 
-	static class StartMusic extends PlayerMessage{
+	//actor message definition start
+	public static class StartMusic extends PlayerMessage{
 		
 	}
 	
@@ -14,8 +17,9 @@ public class MusicPlayer extends AbstractLoggingActor{
 	static class StopMusic extends PlayerMessage{
 		
 	}
+	//actor message definition end
 	
-	static Props props(){
+	public static Props props(){
 		return Props.create(MusicPlayer.class);
 	}
 	

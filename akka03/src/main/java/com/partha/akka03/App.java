@@ -1,5 +1,7 @@
 package com.partha.akka03;
 
+import com.partha.akka03.actors.MusicPlayer;
+
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 
@@ -14,7 +16,6 @@ public class App
     {
     	//this create method has got several other useful overloads
     	ActorSystem actorSystem= ActorSystem.create("myActorSystem");
-    	
     	
     	//creating the actor instance
     	final ActorRef playerRef1  = actorSystem.actorOf(MusicPlayer.props(), "player");
